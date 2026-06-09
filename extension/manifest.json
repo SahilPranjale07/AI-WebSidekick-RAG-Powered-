@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AI Web Companion (RAG)",
+  "version": "1.0",
+  "description": "Instantly chat with any webpage you browse using Retrieval-Augmented Generation (RAG).",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

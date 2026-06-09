@@ -1,0 +1,25 @@
+# Python virtual environments & caches
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+backend/venv/
+
+# Environment variables & secrets
+.env
+.env.*
+backend/.env
+
+# Node.js dependencies & builds
+node_modules/
+dist/
+build/
+.eslintcache
+
+# Local vector store indices & cache files
+backend/vector_store/
+
+# OS metadata
+.DS_Store
+Thumbs.db

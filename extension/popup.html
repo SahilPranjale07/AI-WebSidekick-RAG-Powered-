@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Web Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-circle">
+          <span class="pulse-dot"></span>
+          🤖
+        </div>
+        <div class="brand-text">
+          <h1>AI Web Companion</h1>
+          <p>Local RAG Engine</p>
+        </div>
+      </div>
+      <button id="reset-btn" class="icon-btn" title="Reset Index" style="display: none;">
+        🔄
+      </button>
+    </header>
+
+    <!-- Ingest Section -->
+    <div id="ingest-screen" class="screen active">
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h2>Active Webpage</h2>
+        <p id="current-url">Detecting active page...</p>
+        
+        <button id="ingest-btn" class="primary-btn">
+          Analyze & Train AI on Page
+        </button>
+        
+        <p class="helper-text">This will scrape this webpage, chunk it, and save semantic vectors in your local FAISS database.</p>
+      </div>
+    </div>
+
+    <!-- Chat Section -->
+    <div id="chat-screen" class="screen">
+      <div id="chat-window" class="chat-window">
+        <!-- Messages loaded dynamically -->
+      </div>
+      
+      <div class="input-area">
+        <input type="text" id="query-input" placeholder="Ask anything about this page..." />
+        <button id="send-btn" class="send-btn">
+          <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="overlay">
+      <div class="spinner"></div>
+      <p id="loading-text">Analyzing page content...</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
