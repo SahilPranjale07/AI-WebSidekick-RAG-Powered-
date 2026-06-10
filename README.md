@@ -1,4 +1,4 @@
-# 🤖 AI Website Chatbot & Browser Extension (RAG-Powered)
+# 🤖 AI WebSidekick (RAG-Powered)
 
 An embeddable, data-grounded AI chatbot widget and browser companion built on a local **Retrieval-Augmented Generation (RAG)** pipeline. Instead of relying on generic pre-trained LLM responses, this system extracts real-time page content or PDF data, generates dense vector representations locally using a SentenceTransformers model, indexes them in a local FAISS vector store, and synthesizes context-grounded responses using Groq's LLM inference engine.
 
